@@ -1,0 +1,646 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
+}
+
+h1,
+h2,
+p {
+  color: white;
+  letter-spacing: 5px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+p {
+  font-weight: 400;
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  background-color: #216c0c;
+  overflow: hidden;
+}
+
+.desktopNav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+.desktopNav .menu {
+  list-style: none;
+}
+
+.desktopNav .menu li {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #179e05;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.desktopNav .menu li:hover {
+  background-color: #19d400;
+}
+
+.loginForm {
+  width: 300px;
+  z-index: 10;
+  position: absolute;
+  padding: 20px;
+  top: 100px;
+  right: 20px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 5px solid #0a420a;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 5px #003100;
+          box-shadow: 5px 5px 5px #003100;
+  -webkit-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+}
+
+.loginForm h2 {
+  color: #179e05;
+}
+
+.loginForm div {
+  width: 100%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginForm div input {
+  width: 90%;
+  font-size: 1.3rem;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #179e05;
+  -webkit-transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.loginForm div input:focus {
+  border-bottom: 2px solid #1beb00;
+}
+
+.loginForm .dontHaveAccount {
+  color: #0a420a;
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+
+.loginForm .dontHaveAccount span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loginForm button {
+  margin-top: 10px;
+}
+
+.loginForm .login-error {
+  display: none;
+  margin: 10px 0;
+  color: #d31900;
+  font-size: 1.3rem;
+}
+
+.register-form {
+  width: 300px;
+  z-index: 10;
+  position: absolute;
+  padding: 20px;
+  top: 100px;
+  right: 20px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 5px solid #0a420a;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 5px #003100;
+          box-shadow: 5px 5px 5px #003100;
+  -webkit-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+}
+
+.register-form h2 {
+  color: #179e05;
+}
+
+.register-form div {
+  width: 100%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.register-form div input {
+  width: 90%;
+  font-size: 1.3rem;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #179e05;
+  -webkit-transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.register-form div input:focus {
+  border-bottom: 2px solid #1beb00;
+}
+
+.register-form p {
+  margin: 10px 0;
+  color: #d31900;
+  font-size: 1.3rem;
+}
+
+.register-form .display-error {
+  display: none;
+}
+
+.form-btn {
+  width: 50%;
+  margin: 10px auto;
+  -webkit-box-shadow: -1px 10px 11px -6px #3e7327;
+          box-shadow: -1px 10px 11px -6px #3e7327;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #77b55a), to(#72b352));
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  background-color: #77b55a;
+  border-radius: 6px;
+  border: 1px solid #4b8f29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+  outline: none;
+}
+
+.form-btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #72b352), to(#77b55a));
+  background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+
+.form-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.hidden {
+  right: -300px;
+}
+
+#exit-register {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dealerArea {
+  width: 100%;
+  height: 25%;
+  border-bottom: 20px solid #348e25;
+  background-color: #024e00;
+  z-index: 1;
+}
+
+.dealerCards {
+  padding-left: 50px;
+  height: 80%;
+  z-index: 2;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardWrapper {
+  margin-left: -50px;
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+          transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dealerCards img {
+  border: 1px solid black;
+  max-width: 70px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.dealerPoints {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dealerValue {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#randomBtn {
+  margin-top: 50px;
+  z-index: 2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.playTable {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playTable .notifications {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playerArea {
+  width: 100%;
+  height: 55%;
+  border-top: 20px solid #348e25;
+  background-color: #024e00;
+  z-index: 1;
+}
+
+.playerCredits {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playerCards {
+  height: 50%;
+  padding-left: 50px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.playerValue {
+  height: 10%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.playerCards img {
+  border: 1px solid black;
+  max-width: 70px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.standHitBtns {
+  height: 30%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.playerBtns {
+  width: 50%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: rgba(255, 213, 0, 0.1);
+  position: relative;
+}
+
+.standBtn {
+  border: 5px solid yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.standBtn:hover {
+  background-color: #003100;
+}
+
+.hitBtn {
+  border: 5px solid yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hitBtn:hover {
+  background-color: #003100;
+}
+
+.youWon {
+  display: none;
+}
+
+.youLost {
+  display: none;
+}
+
+.draw {
+  display: none;
+}
+
+.pleaseBet {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bets {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bets div {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  border: 3px solid white;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: border 0.1s ease-in-out;
+  transition: border 0.1s ease-in-out;
+}
+
+.bets div p {
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 1.5em;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 20px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 1px;
+    height: 18px;
+  }
+  50%, 100% {
+    top: 4px;
+    height: 10px;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 1px;
+    height: 18px;
+  }
+  50%, 100% {
+    top: 4px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  h1,
+  h2,
+  p {
+    font-size: 1.5em;
+  }
+  .playTable .bets div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .pleaseBet {
+    margin-top: 50px;
+  }
+  .dealerCards img {
+    max-width: 110px;
+    margin-top: 10px;
+  }
+  .playerCards img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .standHitBtns {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */

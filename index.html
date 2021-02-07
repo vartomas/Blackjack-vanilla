@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id='root'>
+        <div class='dealerArea'>
+            <div class='dealerCards'></div>
+            <div class='dealerValue'>
+                <h2 id='dealerValue'></h2>
+            </div>
+        </div>
+        <div class='playTable'>
+            <div class='notifications'>
+                <h1 class='youWon'>YOU WIN!</h1>
+                <h1 class='youLost'>YOU LOST!</h1>
+                <h1 class='draw'>DRAW!</h1>
+                <h1 class='pleaseBet'>PLEASE PLACE YOUR BET TO START THE ROUND</h1>
+            </div>
+        </div>
+        <div class="playerArea">
+            <div class='playerCredits'>
+                <h2>Credits: <span id='playerCredits'></span></h2>
+            </div>
+            <div class='playerCards'></div>
+            <div class='playerValue'>
+                <h2 id='playerValue'></h2>
+            </div>
+            <div class='standHitBtns'>
+                <div class='playerBtns standBtn' id='standBtn'>
+                    <p>STAND</p>
+                </div>
+                <div class='playerBtns hitBtn' id='hitBtn'>
+                    <p>HIT</p>
+                </div>
+            </div>
+            <div class='bets'>
+                <div class='bet50'>
+                    <p>50</p>
+                </div>
+                <div class='bet100'>
+                    <p>100</p>
+                </div>
+                <div class='bet200'>
+                    <p>200</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="desktopNav">
+        <ul class="menu">
+            <li id='loginRegisterBtn'>LOGIN / REGISTER</li>
+        </ul>
+    </div>
+    <div class='loginForm hidden'>
+        <h2>LOG-IN</h2>
+        <div>
+            <input type="email" id='login-email' placeholder="E-MAIL">
+        </div>
+        <div>
+            <input type="password" id='login-password' placeholder="PASSWORD">
+        </div>
+        <button class='form-btn' id='login-btn'>LOG-IN</button>
+        <p class='login-error'></p>
+        <p class='dontHaveAccount'>DON'T HAVE ACCOUNT? <span id='sign-up-btn'>SIGN-UP!</span></p>
+    </div>
+    <div class="register-form hidden">
+        <h2>SIGN-UP</h2>
+        <div id='exit-register'><i class="fas fa-times"></i></div>
+        <div>
+            <input type="text" id='register-name' placeholder="NAME">
+        </div>
+        <div>
+            <input type="text" id='register-email' placeholder="E-MAIL">
+        </div>
+        <div>
+            <input type="password" id='register-password' placeholder="PASSWORD">
+        </div>
+        <div>
+            <input type="password" id='repeat-password' placeholder="REPEAT PASSWORD">
+        </div>
+        <p class='display-error'></p>
+        <button class='form-btn' id='sign-up-submit'>SIGN-UP</button>
+    </div>
+    <script type='module' src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/e5566d8256.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
